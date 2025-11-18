@@ -33,7 +33,7 @@ export default function App() {
     useEffect(() => {
         if (diceAudio.current) diceAudio.current.volume = 0.4;
 
-        const ws = new WebSocket("ws://localhost:3000");
+        const ws = new WebSocket("wss://nabu.smolik.xyz/arithmos-server/");
         wsRef.current = ws;
 
         ws.onopen = () => {
