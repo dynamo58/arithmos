@@ -1,0 +1,164 @@
+html {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #1d2021;
+    color: #ebdbb2;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
+#app {
+    width: min(95%, 500px);
+    padding: 24px;
+    background: #282828;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+section,
+.card {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #3c3836;
+    border-radius: 12px;
+    border: 1px solid #504945;
+}
+
+h2,
+h3 {
+    margin: 1em 0;
+    color: #fabd2f;
+}
+
+p,
+ul,
+li {
+    color: #ebdbb2;
+}
+
+input,
+button {
+    font-size: 1rem;
+}
+
+input {
+    padding: 8px 10px;
+    margin: 4px 6px;
+    background: #32302f;
+    border: 1px solid #504945;
+    border-radius: 8px;
+    color: #ebdbb2;
+}
+
+input:focus {
+    border-color: #458588;
+}
+
+button {
+    padding: 8px 14px;
+    margin: 4px 6px;
+
+    background: #d65d0e;
+    color: #282828;
+
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.15s;
+}
+
+button:hover {
+    background: #fe8019;
+}
+
+.button-secondary {
+    background: #458588;
+    color: #1d2021;
+}
+
+.button-secondary:hover {
+    background: #83a598;
+}
+
+.button-aqua {
+    background: #689d6a;
+    color: #1d2021;
+}
+
+.button-aqua:hover {
+    background: #8ec07c;
+}
+
+.button-danger {
+    background: #cc241d;
+    color: #ebdbb2;
+}
+
+.button-danger:hover {
+    background: #fb4934;
+}
+
+.info-box {
+    background: #3c3836;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #504945;
+    margin: 1em 0;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 42px);
+    gap: 10px;
+}
+
+.num-tile {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+
+    background: #504945;
+    color: #ebdbb2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    user-select: none;
+
+    transition: background 0.15s;
+}
+
+.num-tile.locked {
+    background: #98971a;
+    color: #1d2021;
+}
+
+/* Optional hover */
+.num-tile:hover {
+    background: #665c54;
+}
+
+.dice {
+    font-size: 2rem;
+    margin: 12px 0;
+    color: #fabd2f;
+}
