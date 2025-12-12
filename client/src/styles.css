@@ -1,26 +1,23 @@
 html {
     min-width: 100%;
-    min-height: 100%;
 }
 
 body {
     font-family: "Inter", sans-serif;
     background: #1d2021;
     color: #ebdbb2;
-    margin: 0;
     padding: 0;
+    margin: 0;
 
     display: flex;
     justify-content: center;
-    height: 95vh;
 }
 
 #root {
+    margin: 3em 0 0 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    ;
 }
 
 #app {
@@ -29,6 +26,31 @@ body {
     background: #282828;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toast {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.3em;
+    border: 3px solid #cc241d !important;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+    pointer-events: none;
 }
 
 section,

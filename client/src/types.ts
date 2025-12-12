@@ -3,9 +3,9 @@ export type UUID = string;
 export type WSMessage =
     | { type: "new-user-response"; data: { id: string; username: string; token: string; error?: string } }
     | { type: "auth-response"; data: { error?: string } }
-    | { type: "get-lobbies-response"; data: Lobby[] }
+    | { type: "get-lobbies-response"; data: LobbyFullInfo[] }
     | { type: "create-lobby-response"; data: { id: string; name: string; error?: string } }
-    | { type: "join-lobby-response"; data: { lobby: Lobby; error?: string } }
+    | { type: "join-lobby-response"; data: { lobby: LobbyFullInfo; error?: string } }
     | { type: "game-start"; data: { gameId: string } }
     | { type: "game-turn-start"; data: { playerId: string; dice: number[] } }
     | { type: "number-locked"; data: { playerId: string; chosen: number } }
@@ -16,7 +16,7 @@ export interface Client {
     id: UUID;
 }
 
-export interface Lobby {
+export interface LobbyFullInfo {
     id: UUID;
     name: string,
     capacity: number,
@@ -37,8 +37,13 @@ export interface GameInfo {
     turnPlayerId: UUID,
 }
 
-export interface LobbyInfo {
+export interface LobbySummary {
     id: string;
     name: string;
-    capacity: string;
+    capacity: [number, number];
+}
+
+export interface MenuSnapshot {
+    lobbies: LobbySummary[];
+    activeGames: number;
 }
