@@ -68,7 +68,7 @@ export default class Game {
         this.currentTurn = this.turnOrder.length > 0
             ? Math.floor(Math.random() * this.turnOrder.length)
             : 0;
-        this.playerBoards = new Map(clients.map(c => [c.id, new Set<number>([2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])]));
+        this.playerBoards = new Map(clients.map(c => [c.id, new Set<number>()]));
 
         this.broadcastToAll = broadcastToAll;
         this.broadcastToClient = broadcastToClient;
